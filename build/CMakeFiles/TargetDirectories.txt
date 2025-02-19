@@ -1,0 +1,3 @@
+/home/h1nezo/Desktop/OP/build/CMakeFiles/MyApp.dir
+/home/h1nezo/Desktop/OP/build/CMakeFiles/edit_cache.dir
+/home/h1nezo/Desktop/OP/build/CMakeFiles/rebuild_cache.dir

@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyApp.dir/main.cpp.o"
   "CMakeFiles/MyApp.dir/main.cpp.o.d"
+  "CMakeFiles/MyApp.dir/models/Client.cpp.o"
+  "CMakeFiles/MyApp.dir/models/Client.cpp.o.d"
+  "CMakeFiles/MyApp.dir/models/Hotel.cpp.o"
+  "CMakeFiles/MyApp.dir/models/Hotel.cpp.o.d"
+  "CMakeFiles/MyApp.dir/models/Room.cpp.o"
+  "CMakeFiles/MyApp.dir/models/Room.cpp.o.d"
   "MyApp"
   "MyApp.pdb"
 )

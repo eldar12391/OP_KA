@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/MyApp.dir/main.cpp.o -o MyApp 
+/usr/bin/c++ CMakeFiles/MyApp.dir/main.cpp.o CMakeFiles/MyApp.dir/models/Client.cpp.o CMakeFiles/MyApp.dir/models/Room.cpp.o CMakeFiles/MyApp.dir/models/Hotel.cpp.o -o MyApp 

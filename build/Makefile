@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/h1nezo/Desktop/OP
+CMAKE_SOURCE_DIR = /home/h1nezo/Desktop/OP/OP_KA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/h1nezo/Desktop/OP/build
+CMAKE_BINARY_DIR = /home/h1nezo/Desktop/OP/OP_KA/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/h1nezo/Desktop/OP/build/CMakeFiles /home/h1nezo/Desktop/OP/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles /home/h1nezo/Desktop/OP/OP_KA/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/h1nezo/Desktop/OP/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+models/Client.o: models/Client.cpp.o
+.PHONY : models/Client.o
+
+# target to build an object file
+models/Client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Client.cpp.o
+.PHONY : models/Client.cpp.o
+
+models/Client.i: models/Client.cpp.i
+.PHONY : models/Client.i
+
+# target to preprocess a source file
+models/Client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Client.cpp.i
+.PHONY : models/Client.cpp.i
+
+models/Client.s: models/Client.cpp.s
+.PHONY : models/Client.s
+
+# target to generate assembly for a file
+models/Client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Client.cpp.s
+.PHONY : models/Client.cpp.s
+
+models/Hotel.o: models/Hotel.cpp.o
+.PHONY : models/Hotel.o
+
+# target to build an object file
+models/Hotel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Hotel.cpp.o
+.PHONY : models/Hotel.cpp.o
+
+models/Hotel.i: models/Hotel.cpp.i
+.PHONY : models/Hotel.i
+
+# target to preprocess a source file
+models/Hotel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Hotel.cpp.i
+.PHONY : models/Hotel.cpp.i
+
+models/Hotel.s: models/Hotel.cpp.s
+.PHONY : models/Hotel.s
+
+# target to generate assembly for a file
+models/Hotel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Hotel.cpp.s
+.PHONY : models/Hotel.cpp.s
+
+models/Room.o: models/Room.cpp.o
+.PHONY : models/Room.o
+
+# target to build an object file
+models/Room.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Room.cpp.o
+.PHONY : models/Room.cpp.o
+
+models/Room.i: models/Room.cpp.i
+.PHONY : models/Room.i
+
+# target to preprocess a source file
+models/Room.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Room.cpp.i
+.PHONY : models/Room.cpp.i
+
+models/Room.s: models/Room.cpp.s
+.PHONY : models/Room.s
+
+# target to generate assembly for a file
+models/Room.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/models/Room.cpp.s
+.PHONY : models/Room.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +237,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... models/Client.o"
+	@echo "... models/Client.i"
+	@echo "... models/Client.s"
+	@echo "... models/Hotel.o"
+	@echo "... models/Hotel.i"
+	@echo "... models/Hotel.s"
+	@echo "... models/Room.o"
+	@echo "... models/Room.i"
+	@echo "... models/Room.s"
 .PHONY : help
 
 

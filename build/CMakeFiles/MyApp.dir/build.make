@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/h1nezo/Desktop/OP
+CMAKE_SOURCE_DIR = /home/h1nezo/Desktop/OP/OP_KA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/h1nezo/Desktop/OP/build
+CMAKE_BINARY_DIR = /home/h1nezo/Desktop/OP/OP_KA/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MyApp.dir/depend.make
@@ -70,30 +70,78 @@ include CMakeFiles/MyApp.dir/progress.make
 include CMakeFiles/MyApp.dir/flags.make
 
 CMakeFiles/MyApp.dir/main.cpp.o: CMakeFiles/MyApp.dir/flags.make
-CMakeFiles/MyApp.dir/main.cpp.o: /home/h1nezo/Desktop/OP/main.cpp
+CMakeFiles/MyApp.dir/main.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/main.cpp
 CMakeFiles/MyApp.dir/main.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h1nezo/Desktop/OP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyApp.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/main.cpp.o -MF CMakeFiles/MyApp.dir/main.cpp.o.d -o CMakeFiles/MyApp.dir/main.cpp.o -c /home/h1nezo/Desktop/OP/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyApp.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/main.cpp.o -MF CMakeFiles/MyApp.dir/main.cpp.o.d -o CMakeFiles/MyApp.dir/main.cpp.o -c /home/h1nezo/Desktop/OP/OP_KA/main.cpp
 
 CMakeFiles/MyApp.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h1nezo/Desktop/OP/main.cpp > CMakeFiles/MyApp.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h1nezo/Desktop/OP/OP_KA/main.cpp > CMakeFiles/MyApp.dir/main.cpp.i
 
 CMakeFiles/MyApp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h1nezo/Desktop/OP/main.cpp -o CMakeFiles/MyApp.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h1nezo/Desktop/OP/OP_KA/main.cpp -o CMakeFiles/MyApp.dir/main.cpp.s
+
+CMakeFiles/MyApp.dir/models/Client.cpp.o: CMakeFiles/MyApp.dir/flags.make
+CMakeFiles/MyApp.dir/models/Client.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Client.cpp
+CMakeFiles/MyApp.dir/models/Client.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyApp.dir/models/Client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/models/Client.cpp.o -MF CMakeFiles/MyApp.dir/models/Client.cpp.o.d -o CMakeFiles/MyApp.dir/models/Client.cpp.o -c /home/h1nezo/Desktop/OP/OP_KA/models/Client.cpp
+
+CMakeFiles/MyApp.dir/models/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/models/Client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h1nezo/Desktop/OP/OP_KA/models/Client.cpp > CMakeFiles/MyApp.dir/models/Client.cpp.i
+
+CMakeFiles/MyApp.dir/models/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/models/Client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h1nezo/Desktop/OP/OP_KA/models/Client.cpp -o CMakeFiles/MyApp.dir/models/Client.cpp.s
+
+CMakeFiles/MyApp.dir/models/Room.cpp.o: CMakeFiles/MyApp.dir/flags.make
+CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Room.cpp
+CMakeFiles/MyApp.dir/models/Room.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyApp.dir/models/Room.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/models/Room.cpp.o -MF CMakeFiles/MyApp.dir/models/Room.cpp.o.d -o CMakeFiles/MyApp.dir/models/Room.cpp.o -c /home/h1nezo/Desktop/OP/OP_KA/models/Room.cpp
+
+CMakeFiles/MyApp.dir/models/Room.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/models/Room.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h1nezo/Desktop/OP/OP_KA/models/Room.cpp > CMakeFiles/MyApp.dir/models/Room.cpp.i
+
+CMakeFiles/MyApp.dir/models/Room.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/models/Room.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h1nezo/Desktop/OP/OP_KA/models/Room.cpp -o CMakeFiles/MyApp.dir/models/Room.cpp.s
+
+CMakeFiles/MyApp.dir/models/Hotel.cpp.o: CMakeFiles/MyApp.dir/flags.make
+CMakeFiles/MyApp.dir/models/Hotel.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.cpp
+CMakeFiles/MyApp.dir/models/Hotel.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyApp.dir/models/Hotel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/models/Hotel.cpp.o -MF CMakeFiles/MyApp.dir/models/Hotel.cpp.o.d -o CMakeFiles/MyApp.dir/models/Hotel.cpp.o -c /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.cpp
+
+CMakeFiles/MyApp.dir/models/Hotel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/models/Hotel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.cpp > CMakeFiles/MyApp.dir/models/Hotel.cpp.i
+
+CMakeFiles/MyApp.dir/models/Hotel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/models/Hotel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.cpp -o CMakeFiles/MyApp.dir/models/Hotel.cpp.s
 
 # Object files for target MyApp
 MyApp_OBJECTS = \
-"CMakeFiles/MyApp.dir/main.cpp.o"
+"CMakeFiles/MyApp.dir/main.cpp.o" \
+"CMakeFiles/MyApp.dir/models/Client.cpp.o" \
+"CMakeFiles/MyApp.dir/models/Room.cpp.o" \
+"CMakeFiles/MyApp.dir/models/Hotel.cpp.o"
 
 # External object files for target MyApp
 MyApp_EXTERNAL_OBJECTS =
 
 MyApp: CMakeFiles/MyApp.dir/main.cpp.o
+MyApp: CMakeFiles/MyApp.dir/models/Client.cpp.o
+MyApp: CMakeFiles/MyApp.dir/models/Room.cpp.o
+MyApp: CMakeFiles/MyApp.dir/models/Hotel.cpp.o
 MyApp: CMakeFiles/MyApp.dir/build.make
 MyApp: CMakeFiles/MyApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h1nezo/Desktop/OP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MyApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable MyApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +153,6 @@ CMakeFiles/MyApp.dir/clean:
 .PHONY : CMakeFiles/MyApp.dir/clean
 
 CMakeFiles/MyApp.dir/depend:
-	cd /home/h1nezo/Desktop/OP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/h1nezo/Desktop/OP /home/h1nezo/Desktop/OP /home/h1nezo/Desktop/OP/build /home/h1nezo/Desktop/OP/build /home/h1nezo/Desktop/OP/build/CMakeFiles/MyApp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/h1nezo/Desktop/OP/OP_KA/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/h1nezo/Desktop/OP/OP_KA /home/h1nezo/Desktop/OP/OP_KA /home/h1nezo/Desktop/OP/OP_KA/build /home/h1nezo/Desktop/OP/OP_KA/build /home/h1nezo/Desktop/OP/OP_KA/build/CMakeFiles/MyApp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MyApp.dir/depend
 

@@ -129,6 +129,30 @@ MyApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
 
+engine/Screen.o: engine/Screen.cpp.o
+.PHONY : engine/Screen.o
+
+# target to build an object file
+engine/Screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/engine/Screen.cpp.o
+.PHONY : engine/Screen.cpp.o
+
+engine/Screen.i: engine/Screen.cpp.i
+.PHONY : engine/Screen.i
+
+# target to preprocess a source file
+engine/Screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/engine/Screen.cpp.i
+.PHONY : engine/Screen.cpp.i
+
+engine/Screen.s: engine/Screen.cpp.s
+.PHONY : engine/Screen.s
+
+# target to generate assembly for a file
+engine/Screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/engine/Screen.cpp.s
+.PHONY : engine/Screen.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
+	@echo "... engine/Screen.o"
+	@echo "... engine/Screen.i"
+	@echo "... engine/Screen.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

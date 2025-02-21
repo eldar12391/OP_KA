@@ -1,10 +1,24 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <locale.h>
+#include <ncursesw/ncurses.h>
+#include "models/Room.h"
+#include "models/Hotel.h"
+#include "engine/Screen.h"
+
 using namespace std;
 
 
 int main()
 {
-	cout << "Hello, World!" << endl;
-	return 0;
+	Hotel myHotel;
+	Screen screen;
+	setlocale(LC_CTYPE, "ru_RU.UTF8"); 
+	screen.addMenuItem("Создать комнату");
+	screen.addMenuItem("Список комнат");
+	screen.addMenuItem("Поиск комнаты");
+	screen.addMenuItem("Выход");
+	screen.displayMenu();
+    return 0;
 }

@@ -10,6 +10,7 @@ class Hotel{
         bool addRoom(const Room& room);
 
         const Room* findRoom(unsigned int number) const;
+        const std::vector<Room> getRooms() const;
 
         std::vector<const Room*> getRoomsByType(RoomType type) const;
 

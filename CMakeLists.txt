@@ -1,13 +1,19 @@
 cmake_minimum_required(VERSION 3.10)
+project(MyApp)
 
-project(Sname)
+set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Найти библиотеку Curses
+find_package(Curses REQUIRED COMPONENTS ncursesw)
 
 add_executable(MyApp 
-main.cpp
-models/Client.cpp
-models/Room.cpp
-models/Hotel.cpp
+    main.cpp
+    models/Client.cpp
+    models/Room.cpp
+    models/Hotel.cpp
+    engine/Screen.cpp
 )
+
+# Подключить библиотеку к целевому исполняемому файлу
+target_include_directories(MyApp PRIVATE ${CURSES_INCLUDE_DIR})
+target_link_libraries(MyApp PRIVATE ${CURSES_LIBRARIES})

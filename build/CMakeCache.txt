@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Sname
+CMAKE_PROJECT_NAME:STATIC=MyApp
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -212,14 +212,32 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-Sname_BINARY_DIR:STATIC=/home/h1nezo/Desktop/OP/OP_KA/build
+//Path to a library.
+CURSES_CURSES_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurses.so
+
+//Path to a library.
+CURSES_FORM_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libform.so
+
+//Path to a file.
+CURSES_INCLUDE_PATH:PATH=/usr/include
+
+//Path to a library.
+CURSES_NCURSES_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libncurses.so
 
 //Value Computed by CMake
-Sname_IS_TOP_LEVEL:STATIC=ON
+MyApp_BINARY_DIR:STATIC=/home/h1nezo/Desktop/OP/OP_KA/build
 
 //Value Computed by CMake
-Sname_SOURCE_DIR:STATIC=/home/h1nezo/Desktop/OP/OP_KA
+MyApp_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+MyApp_SOURCE_DIR:STATIC=/home/h1nezo/Desktop/OP/OP_KA
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
 
 
 ########################
@@ -369,6 +387,20 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_CURSES_LIBRARY
+CURSES_CURSES_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_FORM_LIBRARY
+CURSES_FORM_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_INCLUDE_PATH
+CURSES_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURSES_NCURSES_LIBRARY
+CURSES_NCURSES_LIBRARY-ADVANCED:INTERNAL=1
+//Details about finding Curses
+FIND_PACKAGE_MESSAGE_DETAILS_Curses:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurses.so][/usr/include][v()]
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

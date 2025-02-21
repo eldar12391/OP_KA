@@ -3,10 +3,27 @@
 #include <iostream>
 #include <iomanip>
 
+size_t utf8_length(const std::string str);
+void printTable();
+std::string cutStr(const std::string str, int start, int end);
+void printAligned(std::string str, size_t width);
+void clearConsole();
 
-//Private func -----------------------------------------------------------------------------------------------------------------------
+//Help func -----------------------------------------------------------------------------------------------------------------------
 
-std::string Screen::cutStr(const std::string str, int start, int end) const{
+void printTable() {
+    printAligned("№ Комнаты", 20); std::cout << "║";
+    printAligned("Клиент", 20); std::cout << "║";
+    printAligned("Дата заселения", 20); std::cout << "║";
+    printAligned("Дата выезда", 17); std::cout << "║";
+    printAligned("Класс номера", 8); std::cout << "║";
+    printAligned("Оплата", 8); std::cout << "║";
+    printAligned("Скидки", 11); std::cout << "║";
+    printAligned("Бронь", 11); std::cout << "║";
+    printAligned("Доплаты", 11); std::cout << "║"; std::cout << std::endl;
+}
+
+std::string cutStr(const std::string str, int start, int end){
     if (str.empty()){
         return "";
     }
@@ -25,7 +42,7 @@ std::string Screen::cutStr(const std::string str, int start, int end) const{
     return newStr;
 }
 
-void Screen::printAligned(std::string str, size_t width) const {
+void printAligned(std::string str, size_t width) {
     size_t len = utf8_length(str);
     if (len > width) {
         std::string truncated;
@@ -39,7 +56,7 @@ void Screen::printAligned(std::string str, size_t width) const {
     }
 }
 
-size_t Screen::utf8_length(const std::string str) const {
+size_t utf8_length(const std::string str) {
     size_t length = 0;
     for (size_t i = 0; str[i] != '\0';) {
         if ((str[i] & 0x80) == 0) {
@@ -60,18 +77,26 @@ size_t Screen::utf8_length(const std::string str) const {
 
 
 
-//Public func -----------------------------------------------------------------------------------------------------------------------
 
-void Screen::printTable() const {
-    printAligned("№ Комнаты", 20); std::cout << "║";
-    printAligned("Имя", 20); std::cout << "║";
-    printAligned("Отчество", 20); std::cout << "║";
-    printAligned("Год рождения", 17); std::cout << "║";
-    printAligned("Курс", 8); std::cout << "║";
-    printAligned("Группа", 8); std::cout << "║";
-    printAligned("Предмет 1", 11); std::cout << "║";
-    printAligned("Предмет 2", 11); std::cout << "║";
-    printAligned("Предмет 3", 11); std::cout << "║"; std::cout << std::endl;
+void clearConsole() {
+    system("clear");
+}
+//Class func -----------------------------------------------------------------------------------------------------------------------
+
+void Screen::processOptionSelection(unsigned int choice) {
+    switch(choice){
+        case 1:
+        {   
+            printTable();
+            break;
+        }
+
+        case 4:
+        {
+            isNeedExit = true;
+            break;
+        }
+    }
 }
 
 int Screen::getMenuSize() const{
@@ -85,7 +110,7 @@ std::string Screen::getMenuItem(const unsigned int num) const {
 void Screen::displayMenu() const{
     std::cout << "\nВыберите опцию:\n\n";
     for(int i = 0; i < getMenuSize(); i++){
-        std::cout << i << ". " << getMenuItem(i) << std::endl;
+        std::cout << i+1 << ". " << getMenuItem(i) << std::endl;
     }
 }
 
@@ -93,30 +118,23 @@ void Screen::addMenuItem(const std::string& item){
     menuItems.push_back(item);
 }
 
-void Screen::userChoiceHandler() const {
+void Screen::userChoiceHandler() {
     unsigned int choice = 0;
     bool choiceIsNotCorrect = true;
 
     while(!(std::cin >> choice) || choiceIsNotCorrect){
-        if(choice > 0 && choice < getMenuSize()){
+        if(choice > 0 && choice < (getMenuSize() + 1)){
             choiceIsNotCorrect = false;
         }
+        else {
+            std::cout << "Некорректный вывод!" << std::endl;
+        }
+
+        processOptionSelection(choice);
     }
 }
 
-void Screen::processOptionSelection(unsigned int choice) const {
-    switch(choice){
-        case 1:
-        {   
-            break;
-        }
-    }
-}
 
 bool Screen::exitHandler() const {
     return !isNeedExit;
-}
-
-void Screen::printTable() const {
-
 }

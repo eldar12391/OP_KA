@@ -20,5 +20,9 @@ int main()
 	screen.addMenuItem("Поиск комнаты");
 	screen.addMenuItem("Выход");
 	screen.displayMenu();
+
+	while(screen.exitHandler()){
+		screen.userChoiceHandler();
+	}
     return 0;
 }

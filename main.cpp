@@ -15,7 +15,7 @@ int main()
 	Hotel myHotel;
 	Screen screen;
 	setlocale(LC_CTYPE, "ru_RU.UTF8"); 
-	screen.addMenuItem("Создать комнату");
+	screen.addMenuItem("Вывести таблицу");
 	screen.addMenuItem("Список комнат");
 	screen.addMenuItem("Поиск комнаты");
 	screen.addMenuItem("Выход");

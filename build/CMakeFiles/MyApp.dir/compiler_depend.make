@@ -212,7 +212,20 @@ CMakeFiles/MyApp.dir/engine/Screen.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/engine/S
   /usr/include/c++/12/bits/basic_ios.tcc \
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/c++/12/ctime \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc
 
 CMakeFiles/MyApp.dir/main.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/main.cpp \
   /usr/include/stdc-predef.h \
@@ -817,7 +830,23 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /home/h1nezo/Desktop/OP/OP_KA/main.cpp:
 
+/usr/include/c++/12/sstream:
+
+/usr/include/c++/12/bits/locale_conv.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/12/bits/codecvt.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.h:
+
 /home/h1nezo/Desktop/OP/OP_KA/models/Client.h:
+
+/usr/include/c++/12/ctime:
 
 /usr/include/c++/12/bits/basic_ios.tcc:
 
@@ -957,6 +986,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/ctype.h:
 
+/usr/include/c++/12/locale:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -1037,6 +1068,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/usr/include/c++/12/bits/sstream.tcc:
+
 /usr/include/c++/12/cstdlib:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
@@ -1101,6 +1134,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/c++/12/string:
 
+/usr/include/c++/12/iomanip:
+
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/12/bits/hash_bytes.h:
@@ -1140,6 +1175,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/c++/12/bits/new_allocator.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/c++/12/bits/quoted_string.h:
 
 /usr/include/c++/12/new:
 
@@ -1204,6 +1241,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/c++/12/iosfwd:
+
+/usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 

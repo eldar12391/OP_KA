@@ -1,12 +1,10 @@
-#include <locale.h>
-#include <ncursesw/ncurses.h>
+#include <string>
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
-int main() {
-    setlocale(LC_ALL, "ru_RU.UTF-8");
-    initscr();
-    printw("ТЕСТ РУССКОЙ ЛОКАЛКИ");
-    refresh();
-    getch();
-    endwin();
+int main(){
+    string myStr1 = "Привет";
+    cout << setw(10) << myStr1[3] << endl;
     return 0;
 }

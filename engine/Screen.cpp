@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <iomanip>
-
+#include <limits>
 size_t utf8_length(const std::string str);
 void printTable();
 std::string cutStr(const std::string str, int start, int end);
@@ -120,18 +120,28 @@ void Screen::addMenuItem(const std::string& item){
 
 void Screen::userChoiceHandler() {
     unsigned int choice = 0;
-    bool choiceIsNotCorrect = true;
-
-    while(!(std::cin >> choice) || choiceIsNotCorrect){
-        if(choice > 0 && choice < (getMenuSize() + 1)){
-            choiceIsNotCorrect = false;
+    
+    while(true) {
+        std::cout << "Введите номер опции: ";
+        
+        if(!(std::cin >> choice)) {
+            // Обработка нечислового ввода
+            std::cout << "Ошибка: нужно ввести число!\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
         }
-        else {
-            std::cout << "Некорректный вывод!" << std::endl;
+        
+        if(choice >= 1 && choice <= getMenuSize()) {
+            break; // Корректный выбор
         }
-
-        processOptionSelection(choice);
+        
+        // Некорректный диапазон
+        std::cout << "Ошибка: выбор должен быть от 1 до " 
+                  << getMenuSize() << "!\n";
     }
+    
+    processOptionSelection(choice);
 }
 
 

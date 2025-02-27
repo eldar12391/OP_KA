@@ -8,12 +8,21 @@ find_package(Curses REQUIRED COMPONENTS ncursesw)
 
 add_executable(MyApp 
     main.cpp
+    models/Hotel.cpp  # Исправлено: порядок файлов важен
     models/Client.cpp
     models/Room.cpp
-    models/Hotel.cpp
     engine/Screen.cpp
+    algorithms/Processing.cpp
+)
+
+# Указать компилятору искать заголовочные файлы в этих папках
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}  # Текущая директория (корневая папка проекта)
+    ${CMAKE_CURRENT_SOURCE_DIR}/engine
+    ${CMAKE_CURRENT_SOURCE_DIR}/models
+    ${CMAKE_CURRENT_SOURCE_DIR}/algorithms
+    ${CURSES_INCLUDE_DIRS}  # Исправлено: правильная переменная
 )
 
 # Подключить библиотеку к целевому исполняемому файлу
-target_include_directories(MyApp PRIVATE ${CURSES_INCLUDE_DIR})
 target_link_libraries(MyApp PRIVATE ${CURSES_LIBRARIES})

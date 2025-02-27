@@ -1,8 +1,7 @@
-#pragma once
 #include "Hotel.h"
 #include <iostream>
 
-bool Hotel::addRoom(const Room& room){
+void Hotel::addRoom(const Room& room){
     rooms.push_back(room); 
 }
 
@@ -15,6 +14,6 @@ const Room* Hotel::findRoom(unsigned int number) const {
     return nullptr;
 }
 
-const std::vector<Room> Hotel::getRooms() const {
+const std::vector<Room>& Hotel::getRooms() const {
     return rooms;
 }

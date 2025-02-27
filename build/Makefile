@@ -129,6 +129,30 @@ MyApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
 
+algorithms/Processing.o: algorithms/Processing.cpp.o
+.PHONY : algorithms/Processing.o
+
+# target to build an object file
+algorithms/Processing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Processing.cpp.o
+.PHONY : algorithms/Processing.cpp.o
+
+algorithms/Processing.i: algorithms/Processing.cpp.i
+.PHONY : algorithms/Processing.i
+
+# target to preprocess a source file
+algorithms/Processing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Processing.cpp.i
+.PHONY : algorithms/Processing.cpp.i
+
+algorithms/Processing.s: algorithms/Processing.cpp.s
+.PHONY : algorithms/Processing.s
+
+# target to generate assembly for a file
+algorithms/Processing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Processing.cpp.s
+.PHONY : algorithms/Processing.cpp.s
+
 engine/Screen.o: engine/Screen.cpp.o
 .PHONY : engine/Screen.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
+	@echo "... algorithms/Processing.o"
+	@echo "... algorithms/Processing.i"
+	@echo "... algorithms/Processing.s"
 	@echo "... engine/Screen.o"
 	@echo "... engine/Screen.i"
 	@echo "... engine/Screen.s"

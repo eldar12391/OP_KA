@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/h1nezo/Desktop/OP/OP_KA -I/home/h1nezo/Desktop/OP/OP_KA/engine -I/home/h1nezo/Desktop/OP/OP_KA/models -I/home/h1nezo/Desktop/OP/OP_KA/algorithms
 
 CXX_FLAGS = -g -std=gnu++17
 

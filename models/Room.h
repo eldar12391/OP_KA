@@ -22,8 +22,9 @@ class Room
         RoomStatus getStatus() const;
         double getPrice() const;
         Client* getCurrClient() const;
-
+        void addClient();
         void setStatus(RoomStatus newStatus);
         void assignClient(Client* client);
         void removeClient();
+
 };

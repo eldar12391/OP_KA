@@ -7,10 +7,12 @@ class Hotel{
         std::vector<Room> rooms;
     
     public:
-        void addRoom(const Room& room);
-        const Room* findRoom(unsigned int number) const;
-        const std::vector<Room>& getRooms() const;
+        Room* findRoom(unsigned int number);
+        std::vector<Room>& getRooms();
 
+        void addRoom(const Room& room);
+        void editRoom(int number);
+        void generateRooms(int N);
         std::vector<const Room*> getRoomsByType(RoomType type) const;
 
 

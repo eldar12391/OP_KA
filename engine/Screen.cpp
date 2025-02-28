@@ -29,7 +29,7 @@ void Screen::addMenuItem(const std::string& item){
 }
 
 unsigned int Screen::userChoiceHandler() {
-    unsigned int choice = 0;
+    unsigned int choice = -1;
     
     while(true) {
         std::cout << "Введите номер опции: ";
@@ -42,7 +42,7 @@ unsigned int Screen::userChoiceHandler() {
             continue;
         }
         
-        if(choice >= 1 && choice <= getMenuSize()) {
+        if(choice >= 0 && choice <= getMenuSize()) { //ПОМЕНЯТЬ ПОТОМ НА 1!!!
             break; // Корректный выбор
         }
         

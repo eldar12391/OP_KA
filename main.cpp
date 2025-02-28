@@ -17,17 +17,30 @@ int main()
 	Screen screen;
 	setlocale(LC_CTYPE, "ru_RU.UTF8"); 
 	screen.addMenuItem("Вывести таблицу");
-	screen.addMenuItem("Добавить комнату");
+	screen.addMenuItem("Добавить запись");
+	screen.addMenuItem("Изменить информацию о комнате");
 	screen.addMenuItem("Список комнат");
 	screen.addMenuItem("Поиск комнаты");
 	screen.addMenuItem("Выход");
 	screen.displayMenu();
+
+	
 	while(screen.exitHandler()){
 		unsigned int choice = screen.userChoiceHandler();
 		
 		switch(choice){
+			case 0:
+			{
+				clearConsole();
+				cout << "Введите количество комнат: ";
+				int count = 0;
+				cin >> count;
+				myHotel.generateRooms(count);
+				cout << "Успех!";
+				break;
+			}
 			case 1:
-			{   
+			{   clearConsole();
 				printTable();
 				printRooms(myHotel);
 				break;
@@ -42,8 +55,14 @@ int main()
 				break;
 			}
 
-			case 4:
+			case 3:
 			{   
+				clearConsole();
+				std::cout << "Введите номер комнаты: " << std::endl;
+				std::cout << ">> ";
+				int num = 0;
+				cin >> num;
+				myHotel.editRoom(num);
 				break;
 			}
 
@@ -56,3 +75,4 @@ int main()
 	}
     return 0;
 }
+

@@ -84,14 +84,43 @@ void clearConsole() {
 void printRooms(Hotel hotel) {
     std::vector<Room> rooms = hotel.getRooms();
     for (const Room& room : rooms) {
-        std::cout << "╠════════════════════╬════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
         if (room.getCurrClient() != nullptr) {
-            std::cout << "║"; printAligned(std::to_string(room.getNumber()), 20); std::cout << "║";
-            std::cout << "║"; printAligned(room.getCurrClient()->fullName, 20); std::cout << "║";
+            std::cout << "║"; printAligned(std::to_string(room.getNumber()), 20);
+            std::cout << "║"; printAligned(room.getCurrClient()->fullName, 20);
+
+            std::cout << "║"; printAligned(room.getCurrClient()->checkInDate, 20);
+            std::cout << "║"; printAligned(room.getCurrClient()->checkOutDate, 17);
+
+            std::cout << "║"; printAligned(room.getTypeToStr(), 17);
+
+            std::cout << "║"; printAligned(std::to_string(room.getPrice()), 11);
+            std::cout << "║"; printAligned(std::to_string(room.getCurrClient()->discountAmount), 11);
+
+            std::cout << "║"; printAligned(room.getStatusToStr(), 11);
+            std::cout << "║"; printAligned(std::to_string(room.getCurrClient()->extraSum), 11); std::cout << "║";
+            std::cout << std::endl;
+            std::cout << "╠════════════════════╬════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
+
         } else {
-            std::cout << "Свободно"; // Или оставить пустую строку
+            std::cout << "║"; printAligned(std::to_string(room.getNumber()), 20);
+            std::cout << "║"; printAligned("", 20);
+
+            std::cout << "║"; printAligned("", 20);
+            std::cout << "║"; printAligned("", 17);
+
+            std::cout << "║"; printAligned(room.getTypeToStr(), 17);
+
+            std::cout << "║"; printAligned(std::to_string(room.getPrice()), 11);
+            std::cout << "║"; printAligned("", 11);
+
+            std::cout << "║"; printAligned(room.getStatusToStr(), 11);
+            std::cout << "║"; printAligned("", 11); std::cout << "║";
+            std::cout << std::endl;
+            std::cout << "╠════════════════════╬════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
+
         }
-        std::cout << std::endl;
     }
+    std::cout << "╚════════════════════╩════════════════════╩════════════════════╩═════════════════╩═════════════════╩═══════════╩═══════════╩═══════════╩═══════════╝" << std::endl;
+
 }
 

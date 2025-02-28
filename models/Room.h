@@ -16,7 +16,7 @@ class Room
     
     public:
         Room(unsigned int num, double p, RoomType t);
-
+        Room();
         unsigned int getNumber() const;
         RoomType getType() const;
         RoomStatus getStatus() const;
@@ -24,7 +24,11 @@ class Room
         Client* getCurrClient() const;
         void addClient();
         void setStatus(RoomStatus newStatus);
-        void assignClient(Client* client);
+        void assignClient();
+        void editClient();
         void removeClient();
+
+        std::string getTypeToStr() const;
+        std::string getStatusToStr() const;
 
 };

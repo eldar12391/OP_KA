@@ -9,5 +9,5 @@ struct Client{
     int extraSum;
 
     Client() : fullName("Пустое поле"), checkInDate("Пустое поле"), checkOutDate("Пустое поле"), discountAmount(-1), extraSum(-1){}
-
+    
 };

@@ -226,7 +226,27 @@ CMakeFiles/MyApp.dir/algorithms/Processing.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/
   /home/h1nezo/Desktop/OP/OP_KA/algorithms/Processing.h \
   /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.h \
   /home/h1nezo/Desktop/OP/OP_KA/models/Room.h \
-  /home/h1nezo/Desktop/OP/OP_KA/models/Client.h
+  /home/h1nezo/Desktop/OP/OP_KA/models/Client.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h
 
 CMakeFiles/MyApp.dir/engine/Screen.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/engine/Screen.cpp \
   /usr/include/stdc-predef.h \
@@ -643,6 +663,11 @@ CMakeFiles/MyApp.dir/main.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/main.cpp \
   /usr/include/c++/12/bits/stl_vector.h \
   /usr/include/c++/12/bits/stl_bvector.h \
   /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
   /home/h1nezo/Desktop/OP/OP_KA/models/Room.h \
   /home/h1nezo/Desktop/OP/OP_KA/models/Client.h \
   /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.h \
@@ -1048,12 +1073,41 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
   /usr/include/c++/12/bits/basic_ios.tcc \
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc
 
 
 /home/h1nezo/Desktop/OP/OP_KA/models/Client.cpp:
 
+/usr/include/c++/12/bits/fstream.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h:
+
+/usr/include/c++/12/fstream:
+
 /home/h1nezo/Desktop/OP/OP_KA/main.cpp:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios.h:
+
+/usr/include/termios.h:
 
 /home/h1nezo/Desktop/OP/OP_KA/algorithms/Processing.h:
 
@@ -1129,9 +1183,15 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/c++/12/bits/streambuf.tcc:
 
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
 /usr/include/c++/12/streambuf:
 
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
 /usr/include/c++/12/system_error:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
 
 /usr/include/c++/12/bits/basic_string.tcc:
 
@@ -1199,6 +1259,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /home/h1nezo/Desktop/OP/OP_KA/engine/Screen.cpp:
 
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
+
 /usr/include/c++/12/bits/char_traits.h:
 
 /usr/include/stdint.h:
@@ -1251,6 +1313,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/c++/12/ext/alloc_traits.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
+
 /home/h1nezo/Desktop/OP/OP_KA/models/Hotel.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
@@ -1264,6 +1328,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/c++/12/bits/ptr_traits.h:
+
+/usr/include/unistd.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -1303,6 +1369,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
 /usr/include/c++/12/bits/stl_pair.h:
 
 /usr/include/features.h:
@@ -1337,9 +1405,13 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 
 /usr/include/pthread.h:
 
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
+
 /usr/include/c++/12/ostream:
 
 /usr/include/c++/12/ios:
+
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
 
 /usr/include/c++/12/istream:
 
@@ -1362,6 +1434,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/c++/12/bits/ios_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
 
 /usr/include/c++/12/cwchar:
 
@@ -1388,6 +1462,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/c++/12/bits/ostream_insert.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h:
 
@@ -1416,6 +1492,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/c++/12/bits/locale_facets.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -1464,6 +1542,8 @@ CMakeFiles/MyApp.dir/models/Room.cpp.o: /home/h1nezo/Desktop/OP/OP_KA/models/Roo
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/c++/12/bits/cpp_type_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/c++/12/bits/new_allocator.h:
 

@@ -5,7 +5,15 @@
 #include <limits>
 #include "Processing.h"
 #include "Hotel.h"
+#include <termios.h>
+#include <unistd.h>
 
+void waitForAnyKey() {
+    char garbage;
+    std::cin >> garbage;
+  }
+
+  
 void printTable() {
     std::cout << "╔════════════════════╦════════════════════╦════════════════════╦═════════════════╦═════════════════╦═══════════╦═══════════╦═══════════╦═══════════╗" << std::endl;
     std::cout << "║"; printAligned("№ Комнаты", 20); std::cout << "║";

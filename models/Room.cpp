@@ -1,6 +1,45 @@
 #include "Room.h"
 #include <limits>
 #include <iostream>
+#include <fstream>
+#include <sstream>
+
+std::string roomTypeToString(RoomType type) {
+    switch (type) {
+        case RoomType::Standard:   return "Standard";
+        case RoomType::Superlor:  return "Superlor";
+        case RoomType::Deluxe:     return "Deluxe";
+        case RoomType::Suite:      return "Suite";
+        case RoomType::Apartment:  return "Apartment";
+        default:                  return "Unknown";
+    }
+}
+
+RoomType stringToRoomType(const std::string& str) {
+    if (str == "Standard")   return RoomType::Standard;
+    if (str == "Superlor")  return RoomType::Superlor;
+    if (str == "Deluxe")     return RoomType::Deluxe;
+    if (str == "Suite")      return RoomType::Suite;
+    if (str == "Apartment")  return RoomType::Apartment;
+    return RoomType::Standard; // Default
+}
+
+std::string roomStatusToString(RoomStatus status) {
+    switch (status) {
+        case RoomStatus::Available: return "Available";
+        case RoomStatus::Reserved:  return "Reserved";
+        case RoomStatus::Occupied:  return "Occupied";
+        default:                  return "Unknown";
+    }
+}
+
+RoomStatus stringToRoomStatus(const std::string& str) {
+    if (str == "Available") return RoomStatus::Available;
+    if (str == "Reserved")  return RoomStatus::Reserved;
+    if (str == "Occupied")  return RoomStatus::Occupied;
+    return RoomStatus::Available; // Default
+}
+
 
 Room::Room() : number(0), price(0.0), type(RoomType::Standard), status(RoomStatus::Available), currClient(nullptr) {}  // Или любое другое значение по умолчанию
 Room::Room(unsigned int num, double p, RoomType t) : number(num), price(p), type(t), status(RoomStatus::Available), currClient(nullptr){}
@@ -123,3 +162,66 @@ std::string Room::getStatusToStr() const {
         default:                  return "Unknown Room Status";
     }
 }
+
+void Room::serializeToText(std::ofstream& os) const {
+    os << number << ","
+       << price << ","
+       << roomTypeToString(type) << "," // Преобразуем enum в строку
+       << roomStatusToString(status) << ","; // Преобразуем enum в строку
+
+    // Сохраняем информацию о клиенте
+    if (currClient != nullptr) {
+        os << "true,"  // Индикатор наличия клиента
+           << currClient->fullName << ","
+           << currClient->checkInDate << ","
+           << currClient->checkOutDate << ","
+           << currClient->discountAmount << ","
+           << currClient->extraSum;
+    } else {
+        os << "false"; // Индикатор отсутствия клиента
+    }
+
+    os << std::endl; // Разделитель для каждой комнаты
+}
+
+void Room::deserializeFromText(std::ifstream& is) {
+    std::string line;
+    if (std::getline(is, line)) {
+        std::stringstream ss(line);
+        std::string token;
+
+        // Читаем данные комнаты
+        std::getline(ss, token, ',');
+        number = std::stoi(token);
+
+        std::getline(ss, token, ',');
+        price = std::stod(token);
+
+        std::getline(ss, token, ',');
+        type = stringToRoomType(token); // Преобразуем строку в enum
+
+        std::getline(ss, token, ',');
+        status = stringToRoomStatus(token); // Преобразуем строку в enum
+
+        // Читаем данные о клиенте
+        std::getline(ss, token, ',');
+        bool hasClient = (token == "true");
+
+        if (hasClient) {
+            currClient = new Client();
+
+            std::getline(ss, currClient->fullName, ',');
+            std::getline(ss, currClient->checkInDate, ',');
+            std::getline(ss, currClient->checkOutDate, ',');
+
+            std::getline(ss, token, ',');
+            currClient->discountAmount = std::stoi(token);
+
+            std::getline(ss, token, ',');
+            currClient->extraSum = std::stoi(token);
+        } else {
+            currClient = nullptr;
+        }
+    }
+}
+

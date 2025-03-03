@@ -53,10 +53,15 @@ void Hotel::editRoom(int number){
 
 
 void Hotel::generateRooms(int N) {
+    int length = getRooms().size();
     for (int i = 0; i < N; ++i) {
-        unsigned int number = i + 1;
+        unsigned int number = length + i + 1;
         RoomType type = static_cast<RoomType>(i % 5);
         double price = 1000.0 + (static_cast<int>(type) * 500.0);
         rooms.emplace_back(number, price, type);
     }
+}
+
+void Hotel::loadFile(std::vector<Room> rms){
+    rooms = rms;
 }

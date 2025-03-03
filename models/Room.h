@@ -27,7 +27,8 @@ class Room
         void assignClient();
         void editClient();
         void removeClient();
-
+        void serializeToText(std::ofstream& os) const;
+        void deserializeFromText(std::ifstream& is);
         std::string getTypeToStr() const;
         std::string getStatusToStr() const;
 

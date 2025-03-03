@@ -2,14 +2,15 @@
 #include <string>
 #include <vector>
 #include <locale.h>
-
+#include <fstream>
 #include "Room.h"
 #include "models/Room.h"
 #include "models/Hotel.h"
 #include "engine/Screen.h"
 #include "Processing.h"
-using namespace std;
 
+void saveRoomsToTextFile(const std::vector<Room>& rooms, const std::string& filename);
+std::vector<Room> loadRoomsFromTextFile(const std::string& filename);
 
 int main()
 {
@@ -17,52 +18,67 @@ int main()
 	Screen screen;
 	setlocale(LC_CTYPE, "ru_RU.UTF8"); 
 	screen.addMenuItem("Вывести таблицу");
-	screen.addMenuItem("Добавить запись");
 	screen.addMenuItem("Изменить информацию о комнате");
+	screen.addMenuItem("Сортировать");
+	screen.addMenuItem("Добавить запись");
 	screen.addMenuItem("Список комнат");
 	screen.addMenuItem("Поиск комнаты");
+	screen.addMenuItem("Сохранить информацию в файл");
+	screen.addMenuItem("Загрузить информацию из файла");
 	screen.addMenuItem("Выход");
-	screen.displayMenu();
 
 	
 	while(screen.exitHandler()){
+		clearConsole();
+		screen.displayMenu();
 		unsigned int choice = screen.userChoiceHandler();
 		
 		switch(choice){
 			case 0:
 			{
 				clearConsole();
-				cout << "Введите количество комнат: ";
+				std::cout << "Введите количество комнат: ";
 				int count = 0;
-				cin >> count;
+				std::cin >> count;
 				myHotel.generateRooms(count);
-				cout << "Успех!";
+				std::cout << "Успех!";
 				break;
 			}
 			case 1:
 			{   clearConsole();
 				printTable();
 				printRooms(myHotel);
+				std::cout << "Введите '0' для выхода в меню." << std::endl;
+				waitForAnyKey();
 				break;
 			}
 
 			case 2:
 			{   
-				Room room1(101, 100.0, RoomType::Standard);
-				room1.addClient();
-				myHotel.addRoom(room1);
-				std::cout << std::endl << "Успех!" << std::endl;
+				clearConsole();
+				std::cout << "Введите номер комнаты: " << std::endl;
+				std::cout << ">> ";
+				int num = 0;
+				std::cin >> num;
+				
+				if(myHotel.findRoom(num) != nullptr){
+					myHotel.editRoom(num);
+				}
+				else{
+					clearConsole();
+					std::cout << "Комната с этим номером не найдена. Возвращение в меню." << std::endl;
+					break;
+				}
 				break;
 			}
 
 			case 3:
 			{   
-				clearConsole();
-				std::cout << "Введите номер комнаты: " << std::endl;
-				std::cout << ">> ";
-				int num = 0;
-				cin >> num;
-				myHotel.editRoom(num);
+				int length = myHotel.getRooms().size() + 1;
+				Room room1(length, 100.0, RoomType::Standard);
+				room1.addClient();
+				myHotel.addRoom(room1);
+				std::cout << std::endl << "Успех!" << std::endl;
 				break;
 			}
 
@@ -71,8 +87,58 @@ int main()
 				screen.exit();
 				break;
 			}
+			case 6:
+			{
+				std::string filename;
+				std::cout << "Введите имя файла: ";
+				std::cin >> filename;
+				saveRoomsToTextFile(myHotel.getRooms(), filename);
+				break;
+			}
+			case 7:
+			{	
+				std::string filename;
+				std::cout << "Введите имя файла: ";
+				std::cin >> filename;
+				myHotel.loadFile(loadRoomsFromTextFile(filename));
+				break;
+			}
 		}
 	}
     return 0;
+}
+
+
+
+void saveRoomsToTextFile(const std::vector<Room>& rooms, const std::string& filename) {
+    std::ofstream outFile(filename); // Открываем файл для записи
+
+    if (outFile.is_open()) {
+        for (const auto& room : rooms) {
+            room.serializeToText(outFile); // Используем метод serializeToText
+        }
+        outFile.close();
+    } else {
+        std::cerr << "Error: Could not open file for writing: " << filename << std::endl;
+    }
+}
+
+// Функция для загрузки вектора комнат из текстового файла
+std::vector<Room> loadRoomsFromTextFile(const std::string& filename) {
+    std::vector<Room> rooms;
+    std::ifstream inFile(filename); // Открываем файл для чтения
+
+    if (inFile.is_open()) {
+        Room room;
+        while (inFile.peek() != EOF) {
+            room.deserializeFromText(inFile); // Используем метод deserializeFromText
+            rooms.push_back(room);
+        }
+        inFile.close();
+    } else {
+        std::cerr << "Error: Could not open file for reading: " << filename << std::endl;
+    }
+
+    return rooms;
 }
 

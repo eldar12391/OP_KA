@@ -1,0 +1,4 @@
+1,1000,Standard,Available,false
+2,1500,Superlor,Available,false
+3,2000,Deluxe,Available,false
+4,2500,Suite,Available,false

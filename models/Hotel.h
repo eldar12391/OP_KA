@@ -14,6 +14,6 @@ class Hotel{
         void editRoom(int number);
         void generateRooms(int N);
         std::vector<const Room*> getRoomsByType(RoomType type) const;
-
+        void loadFile(std::vector<Room> rooms);
 
 };

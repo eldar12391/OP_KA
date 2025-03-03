@@ -24,9 +24,10 @@ class Room
         Client* getCurrClient() const;
         void addClient();
         void setStatus(RoomStatus newStatus);
-        void assignClient();
+        void assignClient(const Client& client);
         void editClient();
         void removeClient();
+        void populateClient();
         void serializeToText(std::ofstream& os) const;
         void deserializeFromText(std::ifstream& is);
         std::string getTypeToStr() const;

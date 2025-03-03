@@ -8,6 +8,8 @@
 #include "models/Hotel.h"
 #include "engine/Screen.h"
 #include "Processing.h"
+#include "Sort.h"
+
 
 void saveRoomsToTextFile(const std::vector<Room>& rooms, const std::string& filename);
 std::vector<Room> loadRoomsFromTextFile(const std::string& filename);
@@ -20,9 +22,9 @@ int main()
 	screen.addMenuItem("Вывести таблицу");
 	screen.addMenuItem("Изменить информацию о комнате");
 	screen.addMenuItem("Сортировать");
-	screen.addMenuItem("Добавить запись");
-	screen.addMenuItem("Список комнат");
-	screen.addMenuItem("Поиск комнаты");
+	//screen.addMenuItem("Добавить запись");
+	//screen.addMenuItem("Список комнат");
+	//screen.addMenuItem("Поиск комнаты");
 	screen.addMenuItem("Сохранить информацию в файл");
 	screen.addMenuItem("Загрузить информацию из файла");
 	screen.addMenuItem("Выход");
@@ -48,8 +50,6 @@ int main()
 			{   clearConsole();
 				printTable();
 				printRooms(myHotel);
-				std::cout << "Введите '0' для выхода в меню." << std::endl;
-				waitForAnyKey();
 				break;
 			}
 
@@ -66,13 +66,18 @@ int main()
 				}
 				else{
 					clearConsole();
-					std::cout << "Комната с этим номером не найдена. Возвращение в меню." << std::endl;
+					std::cout << "Комната с этим номером не найдена." << std::endl;
 					break;
 				}
 				break;
 			}
-
+			
 			case 3:
+			{
+				sortField(myHotel.getRooms());
+				break;
+			}
+			case 4:
 			{   
 				int length = myHotel.getRooms().size() + 1;
 				Room room1(length, 100.0, RoomType::Standard);
@@ -104,6 +109,7 @@ int main()
 				break;
 			}
 		}
+		waitForAnyKey();
 	}
     return 0;
 }

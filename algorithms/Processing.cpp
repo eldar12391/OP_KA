@@ -9,6 +9,8 @@
 #include <unistd.h>
 
 void waitForAnyKey() {
+    std::cout << "Введите '0' для выхода в меню." << std::endl;
+    
     char garbage;
     std::cin >> garbage;
   }

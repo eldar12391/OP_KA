@@ -121,3 +121,54 @@ SortOrder getUserSortOrder() {
         }
     }
 }
+
+void sortField(std::vector<Room>& rooms){
+    std::cout << "Выберите поле для сортировки:\n";
+    std::cout << "1. ФИО\n";
+    std::cout << "2. Дата заселения\n";
+    std::cout << "3. Дата выселения\n";
+    std::cout << "4. Класс номера\n";
+    std::cout << "5. Статус номера\n";
+
+    int choice = 0;
+    std::cout << ">> ";
+    std::cin >> choice;
+
+    SortOrder order = getUserSortOrder();
+
+    switch(choice){
+        case 1:
+        {
+            sortByClientFullName(rooms, order);
+            break;
+        }
+        case 2:
+        {
+            sortByCheckInDate(rooms, order);
+            break;
+        }
+        case 3:
+        {
+            sortByCheckOutDate(rooms, order);
+            break;
+        }
+        case 4:
+        {
+            sortByRoomType(rooms, order);
+            break;
+        }
+        case 5:
+        {
+            sortByRoomStatus(rooms, order);
+            break;
+        }
+        default:
+        {
+            std::cout << "Неверно выбрано поле сортировки. Возвращение в меню.";
+            return;
+            break;
+        }
+    }
+    
+
+}

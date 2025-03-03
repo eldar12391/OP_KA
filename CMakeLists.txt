@@ -13,6 +13,7 @@ add_executable(MyApp
     models/Room.cpp
     engine/Screen.cpp
     algorithms/Processing.cpp
+    algorithms/Sort.cpp
 )
 
 # Указать компилятору искать заголовочные файлы в этих папках

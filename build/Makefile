@@ -153,6 +153,30 @@ algorithms/Processing.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Processing.cpp.s
 .PHONY : algorithms/Processing.cpp.s
 
+algorithms/Sort.o: algorithms/Sort.cpp.o
+.PHONY : algorithms/Sort.o
+
+# target to build an object file
+algorithms/Sort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Sort.cpp.o
+.PHONY : algorithms/Sort.cpp.o
+
+algorithms/Sort.i: algorithms/Sort.cpp.i
+.PHONY : algorithms/Sort.i
+
+# target to preprocess a source file
+algorithms/Sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Sort.cpp.i
+.PHONY : algorithms/Sort.cpp.i
+
+algorithms/Sort.s: algorithms/Sort.cpp.s
+.PHONY : algorithms/Sort.s
+
+# target to generate assembly for a file
+algorithms/Sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Sort.cpp.s
+.PHONY : algorithms/Sort.cpp.s
+
 engine/Screen.o: engine/Screen.cpp.o
 .PHONY : engine/Screen.o
 
@@ -285,6 +309,9 @@ help:
 	@echo "... algorithms/Processing.o"
 	@echo "... algorithms/Processing.i"
 	@echo "... algorithms/Processing.s"
+	@echo "... algorithms/Sort.o"
+	@echo "... algorithms/Sort.i"
+	@echo "... algorithms/Sort.s"
 	@echo "... engine/Screen.o"
 	@echo "... engine/Screen.i"
 	@echo "... engine/Screen.s"

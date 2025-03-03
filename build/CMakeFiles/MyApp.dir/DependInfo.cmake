@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/h1nezo/Desktop/OP/OP_KA/algorithms/Processing.cpp" "CMakeFiles/MyApp.dir/algorithms/Processing.cpp.o" "gcc" "CMakeFiles/MyApp.dir/algorithms/Processing.cpp.o.d"
+  "/home/h1nezo/Desktop/OP/OP_KA/algorithms/Sort.cpp" "CMakeFiles/MyApp.dir/algorithms/Sort.cpp.o" "gcc" "CMakeFiles/MyApp.dir/algorithms/Sort.cpp.o.d"
   "/home/h1nezo/Desktop/OP/OP_KA/engine/Screen.cpp" "CMakeFiles/MyApp.dir/engine/Screen.cpp.o" "gcc" "CMakeFiles/MyApp.dir/engine/Screen.cpp.o.d"
   "/home/h1nezo/Desktop/OP/OP_KA/main.cpp" "CMakeFiles/MyApp.dir/main.cpp.o" "gcc" "CMakeFiles/MyApp.dir/main.cpp.o.d"
   "/home/h1nezo/Desktop/OP/OP_KA/models/Client.cpp" "CMakeFiles/MyApp.dir/models/Client.cpp.o" "gcc" "CMakeFiles/MyApp.dir/models/Client.cpp.o.d"

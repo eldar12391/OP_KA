@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyApp.dir/algorithms/Processing.cpp.o"
   "CMakeFiles/MyApp.dir/algorithms/Processing.cpp.o.d"
+  "CMakeFiles/MyApp.dir/algorithms/Requests.cpp.o"
+  "CMakeFiles/MyApp.dir/algorithms/Requests.cpp.o.d"
   "CMakeFiles/MyApp.dir/algorithms/Sort.cpp.o"
   "CMakeFiles/MyApp.dir/algorithms/Sort.cpp.o.d"
   "CMakeFiles/MyApp.dir/engine/Screen.cpp.o"

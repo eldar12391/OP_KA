@@ -9,7 +9,7 @@
 #include "engine/Screen.h"
 #include "Processing.h"
 #include "Sort.h"
-
+#include "Requests.h"
 
 void saveRoomsToTextFile(const std::vector<Room>& rooms, const std::string& filename);
 std::vector<Room> loadRoomsFromTextFile(const std::string& filename);
@@ -21,7 +21,8 @@ int main()
 	setlocale(LC_CTYPE, "ru_RU.UTF8"); 
 	screen.addMenuItem("Вывести таблицу");
 	screen.addMenuItem("Изменить информацию о комнате");
-	screen.addMenuItem("Сортировать");
+	screen.addMenuItem("Сортировка");
+	screen.addMenuItem("Запросы");
 	//screen.addMenuItem("Добавить запись");
 	//screen.addMenuItem("Список комнат");
 	//screen.addMenuItem("Поиск комнаты");
@@ -49,7 +50,7 @@ int main()
 			case 1:
 			{   clearConsole();
 				printTable();
-				printRooms(myHotel);
+				printRooms(myHotel.getRooms());
 				break;
 			}
 
@@ -78,6 +79,11 @@ int main()
 				break;
 			}
 			case 4:
+			{
+				requestHandler(myHotel);
+				break;
+			}
+			case 8:
 			{   
 				int length = myHotel.getRooms().size() + 1;
 				Room room1(length, 100.0, RoomType::Standard);
@@ -87,12 +93,12 @@ int main()
 				break;
 			}
 
-			case 5:
+			case 7:
 			{
 				screen.exit();
 				break;
 			}
-			case 6:
+			case 5:
 			{
 				std::string filename;
 				std::cout << "Введите имя файла: ";
@@ -100,7 +106,7 @@ int main()
 				saveRoomsToTextFile(myHotel.getRooms(), filename);
 				break;
 			}
-			case 7:
+			case 6:
 			{	
 				std::string filename;
 				std::cout << "Введите имя файла: ";

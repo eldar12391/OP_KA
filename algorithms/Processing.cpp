@@ -10,16 +10,16 @@
 
 void waitForAnyKey() {
     std::cout << "Введите '0' для выхода в меню." << std::endl;
-    
+
     char garbage;
     std::cin >> garbage;
   }
 
   
 void printTable() {
-    std::cout << "╔════════════════════╦════════════════════╦════════════════════╦═════════════════╦═════════════════╦═══════════╦═══════════╦═══════════╦═══════════╗" << std::endl;
+    std::cout << "╔════════════════════╦════════════════════════════════════════╦════════════════════╦═════════════════╦═════════════════╦═══════════╦═══════════╦═══════════╦═══════════╗" << std::endl;
     std::cout << "║"; printAligned("№ Комнаты", 20); std::cout << "║";
-    printAligned("Клиент", 20); std::cout << "║";
+    printAligned("Клиент", 40); std::cout << "║";
     printAligned("Дата заселения", 20); std::cout << "║";
     printAligned("Дата выезда", 17); std::cout << "║";
     printAligned("Класс номера", 17); std::cout << "║";
@@ -27,7 +27,7 @@ void printTable() {
     printAligned("Скидки", 11); std::cout << "║";
     printAligned("Бронь", 11); std::cout << "║";
     printAligned("Доплаты", 11); std::cout << "║"; std::cout << std::endl;
-    std::cout << "╠════════════════════╬════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
+    std::cout << "╠════════════════════╬════════════════════════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
 
 }
 
@@ -91,12 +91,11 @@ void clearConsole() {
     system("clear");
 }
 
-void printRooms(Hotel hotel) {
-    std::vector<Room> rooms = hotel.getRooms();
+void printRooms(std::vector<Room>& rooms) {
     for (const Room& room : rooms) {
         if (room.getCurrClient() != nullptr) {
             std::cout << "║"; printAligned(std::to_string(room.getNumber()), 20);
-            std::cout << "║"; printAligned(room.getCurrClient()->fullName, 20);
+            std::cout << "║"; printAligned(room.getCurrClient()->fullName, 40);
 
             std::cout << "║"; printAligned(room.getCurrClient()->checkInDate, 20);
             std::cout << "║"; printAligned(room.getCurrClient()->checkOutDate, 17);
@@ -109,7 +108,7 @@ void printRooms(Hotel hotel) {
             std::cout << "║"; printAligned(room.getStatusToStr(), 11);
             std::cout << "║"; printAligned(std::to_string(room.getCurrClient()->extraSum), 11); std::cout << "║";
             std::cout << std::endl;
-            std::cout << "╠════════════════════╬════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
+            std::cout << "╠════════════════════╬════════════════════════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
 
         } else {
             std::cout << "║"; printAligned(std::to_string(room.getNumber()), 20);
@@ -126,11 +125,11 @@ void printRooms(Hotel hotel) {
             std::cout << "║"; printAligned(room.getStatusToStr(), 11);
             std::cout << "║"; printAligned("", 11); std::cout << "║";
             std::cout << std::endl;
-            std::cout << "╠════════════════════╬════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
+            std::cout << "╠════════════════════╬════════════════════════════════════════╬════════════════════╬═════════════════╬═════════════════╬═══════════╬═══════════╬═══════════╬═══════════╣" << std::endl;
 
         }
     }
-    std::cout << "╚════════════════════╩════════════════════╩════════════════════╩═════════════════╩═════════════════╩═══════════╩═══════════╩═══════════╩═══════════╝" << std::endl;
+    std::cout << "╚════════════════════╩════════════════════════════════════════╩════════════════════╩═════════════════╩═════════════════╩═══════════╩═══════════╩═══════════╩═══════════╝" << std::endl;
 
 }
 

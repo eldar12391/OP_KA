@@ -95,6 +95,17 @@ void sortByRoomStatus(std::vector<Room>& rooms, SortOrder order) {
     });
 }
 
+// 6. Сортировка по номеру комнаты (с направлением)
+void sortByRoomNumber(std::vector<Room>& rooms, SortOrder order) {
+    std::sort(rooms.begin(), rooms.end(), [order](const Room& a, const Room& b) {
+        if (order == SortOrder::Ascending) {
+            return a.getNumber() < b.getNumber();
+        } else {
+            return a.getNumber() > b.getNumber();
+        }
+    });
+}
+
 SortOrder getUserSortOrder() {
     int choice;
     while (true) {
@@ -129,6 +140,7 @@ void sortField(std::vector<Room>& rooms){
     std::cout << "3. Дата выселения\n";
     std::cout << "4. Класс номера\n";
     std::cout << "5. Статус номера\n";
+    std::cout << "6. Номер комнаты\n";
 
     int choice = 0;
     std::cout << ">> ";
@@ -160,6 +172,11 @@ void sortField(std::vector<Room>& rooms){
         case 5:
         {
             sortByRoomStatus(rooms, order);
+            break;
+        }
+        case 6:
+        {
+            sortByRoomNumber(rooms, order);
             break;
         }
         default:

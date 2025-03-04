@@ -153,6 +153,30 @@ algorithms/Processing.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Processing.cpp.s
 .PHONY : algorithms/Processing.cpp.s
 
+algorithms/Requests.o: algorithms/Requests.cpp.o
+.PHONY : algorithms/Requests.o
+
+# target to build an object file
+algorithms/Requests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Requests.cpp.o
+.PHONY : algorithms/Requests.cpp.o
+
+algorithms/Requests.i: algorithms/Requests.cpp.i
+.PHONY : algorithms/Requests.i
+
+# target to preprocess a source file
+algorithms/Requests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Requests.cpp.i
+.PHONY : algorithms/Requests.cpp.i
+
+algorithms/Requests.s: algorithms/Requests.cpp.s
+.PHONY : algorithms/Requests.s
+
+# target to generate assembly for a file
+algorithms/Requests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/algorithms/Requests.cpp.s
+.PHONY : algorithms/Requests.cpp.s
+
 algorithms/Sort.o: algorithms/Sort.cpp.o
 .PHONY : algorithms/Sort.o
 
@@ -309,6 +333,9 @@ help:
 	@echo "... algorithms/Processing.o"
 	@echo "... algorithms/Processing.i"
 	@echo "... algorithms/Processing.s"
+	@echo "... algorithms/Requests.o"
+	@echo "... algorithms/Requests.i"
+	@echo "... algorithms/Requests.s"
 	@echo "... algorithms/Sort.o"
 	@echo "... algorithms/Sort.i"
 	@echo "... algorithms/Sort.s"

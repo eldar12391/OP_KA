@@ -16,4 +16,17 @@ class Hotel{
         std::vector<const Room*> getRoomsByType(RoomType type) const;
         void loadFile(std::vector<Room> rooms);
 
+        std::vector<Room> getClientsInRoomType(RoomType type) const;
+
+        std::vector<Room> getClientsStayingLongerThan(int days) const;
+        std::vector<Room> getClientsStayingShorterThan(int days) const;
+        std::vector<Room> getClientsStayingEqual(int days) const;
+
+
+        std::vector<Room> getClientsPayingMoreThan(int amount) const;
+        std::vector<Room> getClientsPayingLessThan(int amount) const;
+        std::vector<Room> getClientsLeavingWithinDays(int days) const;
+        std::vector<std::pair<Room, int>> getMaxMinStay(); // Возвращает max и min в виде пары.
+        std::vector<Room> getReservedRoomNumbers() const;
+        std::vector<Room> getClientsNeedingToPayExtra() const;
 };

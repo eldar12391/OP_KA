@@ -3,6 +3,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <ctime>
+#include <iomanip>
 
 std::string roomTypeToString(RoomType type) {
     switch (type) {
@@ -42,12 +44,12 @@ RoomStatus stringToRoomStatus(const std::string& str) {
 
 
 Room::Room() : number(0), price(0.0), type(RoomType::Standard), status(RoomStatus::Available), currClient(nullptr) {}  // Или любое другое значение по умолчанию
-Room::Room(unsigned int num, double p, RoomType t) : number(num), price(p), type(t), status(RoomStatus::Available), currClient(nullptr){}
+Room::Room(unsigned int num, int p, RoomType t) : number(num), price(p), type(t), status(RoomStatus::Available), currClient(nullptr){}
 
-unsigned int Room::getNumber() const { return number; }
+int Room::getNumber() const { return number; }
 RoomType Room::getType() const { return type; }
 RoomStatus Room::getStatus() const { return status; }
-double Room::getPrice() const { return price; }
+int Room::getPrice() const { return price; }
 Client* Room::getCurrClient() const { return currClient; }
 
 void Room::setStatus(RoomStatus newStatus){ status = newStatus; }
@@ -172,6 +174,14 @@ std::string Room::getStatusToStr() const {
     }
 }
 
+std::string Room::getCheckInDate() const{
+    return currClient->checkInDate;
+}
+
+std::string Room::getCheckOutDate() const{
+    return currClient->checkOutDate;
+}
+
 void Room::serializeToText(std::ofstream& os) const {
     os << number << ","
        << price << ","
@@ -234,3 +244,31 @@ void Room::deserializeFromText(std::ifstream& is) {
     }
 }
 
+
+int daysBetween(const std::string& date1, const std::string& date2) {
+    std::tm tm1 = {};
+    std::tm tm2 = {};
+    std::istringstream ss1(date1);
+    std::istringstream ss2(date2);
+
+    ss1 >> std::get_time(&tm1, "%Y-%m-%d");
+    ss2 >> std::get_time(&tm2, "%Y-%m-%d");
+
+    if (ss1.fail() || ss2.fail()) {
+        return 0; // Или другое значение по умолчанию, указывающее на ошибку
+    }
+
+    std::time_t t1 = mktime(&tm1);
+    std::time_t t2 = mktime(&tm2);
+
+    if (t1 == -1 || t2 == -1) {
+        return 0; // Или другое значение по умолчанию, указывающее на ошибку
+    }
+
+    return (t2 - t1) / (24 * 60 * 60);
+}
+
+int Room::getAmountPaid() const {
+    int amount = daysBetween(getCheckInDate(), getCheckOutDate()) * price;
+    return amount;
+}

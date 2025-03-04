@@ -14,6 +14,7 @@ add_executable(MyApp
     engine/Screen.cpp
     algorithms/Processing.cpp
     algorithms/Sort.cpp
+    algorithms/Requests.cpp
 )
 
 # Указать компилятору искать заголовочные файлы в этих папках

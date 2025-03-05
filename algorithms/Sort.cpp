@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <iostream>
 #include <limits>
-enum class SortOrder { Ascending, Descending }; // Добавляем enum для направления сортировки
+enum class SortOrder { Ascending, Descending };
 
 
 // 1. Сортировка по типу комнаты (с направлением)

@@ -57,14 +57,17 @@ void Room::removeClient() { delete currClient; currClient = nullptr; status = Ro
 
 void Room::assignClient(const Client& client) {
     if (currClient != nullptr) {
-        delete currClient; // Free the previously assigned client's memory
+        delete currClient;
     }
-    currClient = new Client(client); // Create a new Client object using the copy constructor
+    currClient = new Client(client);
     status = RoomStatus::Occupied;
-    std::cout << "Assigned client " << client.fullName << " to room " << number << std::endl;
+    std::cout << "Заселён клиент " << client.fullName << " в комнату " << number << std::endl;
 }
 
-void Room::populateClient() { 
+void Room::populateClient(const Client& client) {
+    if (currClient != nullptr) {
+        delete currClient;
+    } 
     std::cout << "Введите ФИО: " << std::endl;
     std::cin >> getCurrClient()->fullName;
     

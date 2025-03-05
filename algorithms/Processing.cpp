@@ -112,7 +112,7 @@ void printRooms(std::vector<Room>& rooms) {
 
         } else {
             std::cout << "║"; printAligned(std::to_string(room.getNumber()), 20);
-            std::cout << "║"; printAligned("", 20);
+            std::cout << "║"; printAligned("", 40);
 
             std::cout << "║"; printAligned("", 20);
             std::cout << "║"; printAligned("", 17);

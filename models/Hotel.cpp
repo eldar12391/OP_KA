@@ -37,7 +37,34 @@ void Hotel::editRoom(int number){
 
     switch(choice){
         case 1:
-        {   room->populateClient();
+        {   
+            if(room->getCurrClient() != nullptr) {
+                std::cout << "В этом номере уже есть клиент!\n";
+                break; 
+            }
+
+            Client newClient;
+
+            std::cout << "Введите ФИО: " << std::endl;
+            std::cin >> newClient.fullName;
+
+            std::cout << "Введите дату заселения: ";
+            std::cin >> newClient.checkInDate;
+            std::cout << std::endl;
+
+            std::cout << "Введите дату выселения: ";
+            std::cin >> newClient.checkOutDate;
+            std::cout << std::endl;
+
+            std::cout << "Введите размер скидки: ";
+            std::cin >> newClient.discountAmount ;
+            std::cout << std::endl;
+
+            std::cout << "Введите сумму доплаты: ";
+            std::cin >> newClient.extraSum;
+            std::cout << std::endl;
+    
+            room->assignClient(newClient);
             break;
         }
         case 2:
@@ -112,8 +139,8 @@ void Hotel::generateRooms(int N) {
         newClient.discountAmount = discountDist(gen);
         newClient.extraSum = extraSumDist(gen);
 
-        //  Находим только что созданную комнату и присваиваем ей клиента
-        rooms.back().assignClient(newClient);  //Предполагается, что assignClient теперь принимает объект Client напрямую.
+        
+        rooms.back().assignClient(newClient);  
     }
 }
 

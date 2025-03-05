@@ -33,10 +33,9 @@ class Room
         void assignClient(const Client& client);
         void editClient();
         void removeClient();
-        void populateClient();
+        void populateClient(const Client& client);
         void serializeToText(std::ofstream& os) const;
         void deserializeFromText(std::ifstream& is);
         std::string getTypeToStr() const;
         std::string getStatusToStr() const;
-
 };

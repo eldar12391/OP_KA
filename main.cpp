@@ -96,7 +96,7 @@ int main()
 			case 7:
 			{
 				screen.exit();
-				break;
+				return 0;
 			}
 			case 5:
 			{
@@ -131,7 +131,7 @@ void saveRoomsToTextFile(const std::vector<Room>& rooms, const std::string& file
         }
         outFile.close();
     } else {
-        std::cerr << "Error: Could not open file for writing: " << filename << std::endl;
+        std::cerr << "Ошибка: невозможно сохранить файлы " << filename << std::endl;
     }
 }
 
@@ -148,7 +148,7 @@ std::vector<Room> loadRoomsFromTextFile(const std::string& filename) {
         }
         inFile.close();
     } else {
-        std::cerr << "Error: Could not open file for reading: " << filename << std::endl;
+        std::cerr << "Ошибка: невозможно открыть файл: " << filename << std::endl;
     }
 
     return rooms;
